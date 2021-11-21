@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="VaraAPI_CasoEstudio.Views.VisualizarVaramientosView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:VaraAPI_CasoEstudio.Views"
+             xmlns:viewModels="clr-namespace:VaraAPI_CasoEstudio.ViewModels"
+             d:DataContext="{ d:DesignInstance Type=viewModels:VisualizarVaramientosViewModel }"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="1000" Background="White">
+    <Grid>
+        <Label Content="Mis Varamientos" FontSize="40" FontWeight="Bold" Margin="10,22,-10,-22"/>
+        <Label Content="Total de registros:" Margin="26,88,-26,-88"/>
+
+        <DataGrid Margin="26,132,204,34">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Nombre del Informante" Width="100"/>
+                <DataGridTextColumn Header="Pais" Width="100"/>
+                <DataGridTextColumn Header="Estado" Width="100"/>
+                <DataGridTextColumn Header="Finalizado" Width="100"/>
+                <DataGridTextColumn Header="Fecha del Avistamiento" Width="130"/>
+                <DataGridTextColumn Header="Condicion Animal" Width="110"/>
+                <DataGridTextColumn Header="Numero de Animales" Width="120"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Button Margin="832,37,28,517"
+                Content="Registrar Varamiento">
+        </Button>
+
+        <Button Content="Eliminar Varamiento" 
+                Margin="832,132,28,422">
+        </Button>
+    </Grid>
+</UserControl>
